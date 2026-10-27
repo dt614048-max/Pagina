@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos | Bajo Rendimiento Académico</title>
+    <link rel="stylesheet" href="Nos.css">
+</head>
+
+<body>
+    <div class="fondo-suave" aria-hidden="true"></div>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header class="encabezado">
+        <nav class="menu">
+            <a href="Inicio.html" class="contenedor-logo">
+                <img src="imagens/LOGO.png" alt="Logo del proyecto" class="logo">
+            </a>
+
+            <ul class="menu-lista">
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="nOSOTROS.html" class="activo">Quiénes somos</a></li>
+                <li><a href="Evidencias%20.html">Evidencias</a></li>
+                <li><a href="Solucion%20Tecnica.html">Solución técnica</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN -->
+        <section class="presentacion">
+            <div class="banner">
+                <img src="imagens/Quienessomosbanner.PNG"
+                     alt="Banner de la sección Quiénes Somos">
+            </div>
+
+            <span class="etiqueta">CONOCE NUESTRO EQUIPO</span>
+
+            <h1>
+                ¿De qué manera la falta de interés de los estudiantes por
+                las actividades académicas influye en su bajo rendimiento escolar?
+            </h1>
+
+            <p class="subtitulo">
+                Conoce nuestra misión, visión y los objetivos que guían
+                este proyecto educativo.
+            </p>
+        </section>
+
+        <!-- MISIÓN, VISIÓN, OBJETIVOS Y CRONOGRAMA -->
+        <section class="seccion seccion-interactiva">
+            <div class="titulo-seccion">
+                <span class="numero">01</span>
+                <h2>Conoce nuestro proyecto</h2>
+                <div class="linea"></div>
+
+                <p class="descripcion-seccion">
+                    Selecciona una opción para descubrir cada parte
+                    de nuestra propuesta.
+                </p>
+            </div>
+
+            <div class="botones-panel" role="group" aria-label="Apartados del proyecto">
+                <button type="button" class="boton-pestana activo"
+                        data-imagen="img1" aria-pressed="true">
+                    Misión
+                </button>
+
+                <button type="button" class="boton-pestana"
+                        data-imagen="img2" aria-pressed="false">
+                    Visión
+                </button>
+
+                <button type="button" class="boton-pestana"
+                        data-imagen="img3" aria-pressed="false">
+                    Objetivos generales
+                </button>
+
+                <button type="button" class="boton-pestana"
+                        data-imagen="img4" aria-pressed="false">
+                    Objetivos específicos
+                </button>
+
+                <button type="button" class="boton-pestana"
+                        data-imagen="img5" aria-pressed="false">
+                    Cronograma
+                </button>
+            </div>
+
+            <div id="contenedor" class="contenedor-imagenes" aria-live="polite">
+                <div class="mensaje-inicial" id="mensaje-inicial" hidden>
+                    <span class="icono-panel">✦</span>
+                    <p>Elige una opción para ver su contenido.</p>
+                </div>
+
+                <img id="img1" src="imagens/MISION.png"
+                     alt="Misión del proyecto" class="imagen-panel">
+
+                <img id="img2" src="imagens/VISION.png"
+                     alt="Visión del proyecto" class="imagen-panel" hidden>
+
+                <img id="img3" src="imagens/OBJETIVOS GENERALES.png"
+                     alt="Objetivos generales del proyecto" class="imagen-panel" hidden>
+
+                <img id="img4" src="imagens/OBJETIVOS ESPECIFICOS.png"
+                     alt="Objetivos específicos del proyecto" class="imagen-panel" hidden>
+
+                <img id="img5" src="imagens/cRONONOAS.PNG"
+                     alt="Cronograma del proyecto" class="imagen-panel" hidden>
+            </div>
+        </section>
+
+        <!-- PRESENTACIÓN DEL EQUIPO -->
+        <section class="seccion">
+            <div class="titulo-seccion">
+                <span class="numero">02</span>
+                <h2>¿Quiénes somos?</h2>
+                <div class="linea"></div>
+            </div>
+
+            <div class="tarjeta tarjeta-equipo">
+                <div class="icono-equipo" aria-hidden="true">🤝</div>
+
+                <div>
+                    <h3>Un equipo con una meta en común</h3>
+
+                    <p>
+                        Somos un equipo interesado en comprender las dificultades
+                        que enfrentan los estudiantes frente al aprendizaje.
+                        Nuestro proyecto busca analizar las causas del desinterés
+                        académico y desarrollar una propuesta que contribuya a
+                        mejorar la motivación y la participación.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTEGRANTES -->
+        <section class="seccion">
+            <div class="titulo-seccion">
+                <span class="numero">03</span>
+                <h2>Nuestro equipo de trabajo</h2>
+                <div class="linea"></div>
+
+                <p class="descripcion-seccion">
+                    Estudiantes del curso 1103 trabajando juntos para desarrollar
+                    el proyecto.
+                </p>
+            </div>
+
+            <div class="integrantes">
+
+                <article class="tarjeta tarjeta-integrante">
+                    <div class="avatar" aria-hidden="true">DT</div>
+
+                    <h3>Daniel Torres</h3>
+
+                    <span class="rol">Programación y solución técnica</span>
+
+                    <p>
+                        Daniel estuvo encargado de la programación de la página
+                        web y del desarrollo de la solución técnica del proyecto.
+                    </p>
+                </article>
+
+                <article class="tarjeta tarjeta-integrante">
+                    <div class="avatar" aria-hidden="true">JS</div>
+
+                    <h3>Jeanpool Saez</h3>
+
+                    <span class="rol">Diseño y elaboración de evidencias</span>
+
+                    <p>
+                        Jeanpool participó en la elaboración de la estructura
+                        y el diseño de la página, además de aportar ideas y
+                        colaborar en la preparación de las evidencias junto
+                        a Daniel.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PROPÓSITO DEL PROYECTO -->
+        <section class="seccion">
+            <div class="tarjeta tarjeta-proposito">
+                <span class="icono-proposito" aria-hidden="true">💡</span>
+
+                <div>
+                    <h2>¿Qué nos motiva?</h2>
+
+                    <p>
+                        Somos un equipo comprometido con la educación y el
+                        mejoramiento del rendimiento académico de los estudiantes.
+                        Nos interesa comprender por qué algunos jóvenes pierden
+                        la motivación por aprender y cómo esta falta de interés
+                        puede afectar su desempeño escolar.
+                    </p>
+
+                    <p>
+                        Nuestro proyecto nace al observar que muchos estudiantes
+                        presentan dificultades en su rendimiento académico, no
+                        siempre por falta de capacidades, sino también por la
+                        desmotivación, la poca participación en clase y el
+                        desinterés por sus actividades escolares.
+                    </p>
+
+                    <p>
+                        A través de este trabajo, buscamos identificar posibles
+                        causas y proponer estrategias que fomenten la participación,
+                        la responsabilidad y el entusiasmo por el aprendizaje.
+                        Creemos que comprender estas dificultades es un primer
+                        paso para encontrar alternativas que ayuden a los
+                        estudiantes a mejorar su actitud frente al estudio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>Proyecto educativo | Bajo Rendimiento Académico</p>
+        <p>Comprender la falta de interés es un paso para promover el aprendizaje.</p>
+    </footer>
+
+    <!-- FUNCIONAMIENTO DE LOS BOTONES -->
+    <script>
+        const botones = document.querySelectorAll(".boton-pestana");
+        const imagenes = document.querySelectorAll(".imagen-panel");
+
+        botones.forEach((boton) => {
+            boton.addEventListener("click", () => {
+                const idImagen = boton.dataset.imagen;
+
+                imagenes.forEach((imagen) => {
+                    imagen.hidden = true;
+                });
+
+                botones.forEach((otroBoton) => {
+                    otroBoton.classList.remove("activo");
+                    otroBoton.setAttribute("aria-pressed", "false");
+                });
+
+                const imagenSeleccionada = document.getElementById(idImagen);
+
+                if (imagenSeleccionada) {
+                    imagenSeleccionada.hidden = false;
+                }
+
+                boton.classList.add("activo");
+                boton.setAttribute("aria-pressed", "true");
+            });
+        });
+    </script>
+
+</body>
+</html>

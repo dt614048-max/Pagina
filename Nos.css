@@ -1,0 +1,774 @@
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --morado: #7138c5;
+    --morado-oscuro: #49217f;
+    --lila: #a78bfa;
+    --rosa: #f3a6d4;
+    --blanco: #ffffff;
+    --texto: #38334b;
+    --texto-secundario: #655d78;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: #f6f0ff;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   FONDO PASTEL
+======================================== */
+
+.fondo-suave {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(203, 180, 255, 0.65),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 40%,
+            rgba(255, 190, 225, 0.55),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #eee5ff 0%,
+            #e5efff 50%,
+            #fff0f8 100%
+        );
+}
+
+
+/* ========================================
+   MENÚ DE NAVEGACIÓN
+======================================== */
+
+.encabezado {
+    width: 100%;
+
+    background: linear-gradient(
+        110deg,
+        #49217f,
+        #7138c5,
+        #8954d8
+    );
+
+    box-shadow: 0 5px 20px rgba(57, 30, 95, 0.25);
+
+    position: relative;
+    z-index: 10;
+}
+
+.menu {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 105px;
+
+    margin: auto;
+    padding: 10px 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo {
+    display: block;
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.menu-lista {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.menu-lista li a {
+    display: block;
+    padding: 12px 17px;
+
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.menu-lista li a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-3px);
+}
+
+.menu-lista li a.activo {
+    background-color: rgba(255, 255, 255, 0.22);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+
+/* ========================================
+   PRESENTACIÓN PRINCIPAL
+======================================== */
+
+.presentacion {
+    padding: 45px 7% 55px;
+    text-align: center;
+
+    animation: aparecer 0.8s ease;
+}
+
+.banner {
+    max-width: 1000px;
+
+    margin: 0 auto 38px;
+    overflow: hidden;
+
+    border-radius: 25px;
+    border: 5px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow: 0 15px 35px rgba(77, 44, 126, 0.2);
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.banner:hover img {
+    transform: scale(1.025);
+}
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 7px 20px;
+    margin-bottom: 18px;
+
+    color: var(--morado-oscuro);
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(113, 56, 197, 0.15);
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.presentacion h1 {
+    max-width: 1000px;
+
+    margin: 0 auto 18px;
+
+    color: var(--morado-oscuro);
+
+    font-size: clamp(28px, 4vw, 43px);
+    line-height: 1.35;
+    font-weight: 900;
+}
+
+.subtitulo {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: var(--texto-secundario);
+    font-size: 18px;
+}
+
+
+/* ========================================
+   SECCIONES
+======================================== */
+
+.seccion {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 55px 6%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.numero {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--morado);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.titulo-seccion h2 {
+    color: var(--morado-oscuro);
+
+    font-size: clamp(25px, 3.5vw, 36px);
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+.linea {
+    width: 90px;
+    height: 5px;
+
+    margin: 17px auto;
+
+    background: linear-gradient(
+        90deg,
+        var(--morado),
+        var(--rosa)
+    );
+
+    border-radius: 20px;
+}
+
+.descripcion-seccion {
+    max-width: 760px;
+
+    margin: 10px auto 0;
+
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+
+/* ========================================
+   BOTONES INTERACTIVOS
+======================================== */
+
+.botones-panel {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin: 0 auto 30px;
+}
+
+.boton-pestana {
+    padding: 13px 20px;
+
+    border: 2px solid rgba(113, 56, 197, 0.2);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--morado-oscuro);
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(77, 44, 126, 0.06);
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.boton-pestana:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--morado);
+
+    box-shadow: 0 8px 20px rgba(77, 44, 126, 0.13);
+}
+
+.boton-pestana.activo {
+    color: white;
+
+    background: linear-gradient(
+        110deg,
+        #7138c5,
+        #a14fd2
+    );
+
+    border-color: transparent;
+
+    box-shadow: 0 8px 20px rgba(113, 56, 197, 0.25);
+}
+
+.boton-pestana:focus-visible {
+    outline: 3px solid #f3a6d4;
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   IMÁGENES DE MISIÓN, VISIÓN Y OBJETIVOS
+======================================== */
+
+.contenedor-imagenes {
+    min-height: 260px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+
+    box-shadow: 0 12px 35px rgba(77, 44, 126, 0.09);
+
+    backdrop-filter: blur(10px);
+}
+
+.imagen-panel {
+    display: block;
+
+    width: 100%;
+    max-width: 760px;
+    max-height: 650px;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 28px rgba(57, 30, 95, 0.12);
+
+    animation: aparecer 0.35s ease;
+}
+
+.imagen-panel[hidden],
+.mensaje-inicial[hidden] {
+    display: none !important;
+}
+
+.mensaje-inicial {
+    text-align: center;
+    color: var(--texto-secundario);
+    padding: 25px;
+}
+
+.icono-panel {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--morado);
+    font-size: 44px;
+}
+
+
+/* ========================================
+   TARJETAS GENERALES
+======================================== */
+
+.tarjeta {
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+
+    box-shadow: 0 12px 35px rgba(77, 44, 126, 0.09);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 18px 40px rgba(77, 44, 126, 0.14);
+}
+
+.tarjeta h3 {
+    margin-bottom: 12px;
+
+    color: var(--morado);
+
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.tarjeta p {
+    margin-bottom: 15px;
+
+    color: var(--texto-secundario);
+    font-size: 16px;
+    text-align: left;
+}
+
+.tarjeta p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   PRESENTACIÓN DEL EQUIPO
+======================================== */
+
+.tarjeta-equipo {
+    display: grid;
+    grid-template-columns: 85px 1fr;
+    align-items: start;
+    gap: 25px;
+}
+
+.icono-equipo,
+.icono-proposito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #e7dcff,
+        #fce2f2
+    );
+
+    font-size: 35px;
+}
+
+
+/* ========================================
+   INTEGRANTES
+======================================== */
+
+.integrantes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-integrante {
+    text-align: center;
+    padding: 32px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 88px;
+    height: 88px;
+
+    margin: 0 auto 18px;
+
+    border: 4px solid rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #7138c5,
+        #c277cf
+    );
+
+    box-shadow: 0 8px 20px rgba(77, 44, 126, 0.18);
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.tarjeta-integrante h3 {
+    margin-bottom: 5px;
+}
+
+.rol {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--morado);
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tarjeta-integrante p {
+    text-align: center;
+}
+
+
+/* ========================================
+   PROPÓSITO DEL PROYECTO
+======================================== */
+
+.tarjeta-proposito {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: start;
+    gap: 25px;
+}
+
+.tarjeta-proposito h2 {
+    margin-bottom: 15px;
+
+    color: var(--morado-oscuro);
+    font-size: 28px;
+}
+
+
+/* ========================================
+   PIE DE PÁGINA
+======================================== */
+
+.pie-pagina {
+    padding: 30px 20px;
+
+    color: white;
+    text-align: center;
+
+    background: linear-gradient(
+        110deg,
+        #49217f,
+        #7138c5
+    );
+}
+
+.pie-pagina p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.pie-pagina p:first-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   ANIMACIONES
+======================================== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   TABLETAS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .menu {
+        flex-direction: column;
+        padding: 15px 4%;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .menu-lista {
+        gap: 4px;
+    }
+
+    .menu-lista li a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .presentacion {
+        padding: 35px 5% 45px;
+    }
+
+    .tarjeta-equipo,
+    .tarjeta-proposito {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .menu {
+        padding: 14px 3%;
+    }
+
+    .menu-lista {
+        width: 100%;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .menu-lista li a {
+        padding: 8px 9px;
+        font-size: 12px;
+    }
+
+    .presentacion {
+        padding: 28px 5% 35px;
+    }
+
+    .banner {
+        margin-bottom: 28px;
+        border-width: 3px;
+        border-radius: 17px;
+    }
+
+    .etiqueta {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+    .seccion {
+        padding: 38px 5%;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 25px;
+    }
+
+    .botones-panel {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .boton-pestana {
+        padding: 11px 9px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    .contenedor-imagenes {
+        min-height: 180px;
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .imagen-panel {
+        border-radius: 12px;
+    }
+
+    .tarjeta,
+    .tarjeta-integrante {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .tarjeta h3 {
+        font-size: 21px;
+    }
+
+    .tarjeta p {
+        font-size: 15px;
+    }
+
+    .integrantes {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .icono-equipo,
+    .icono-proposito {
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+
+    .tarjeta-proposito h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* ========================================
+   ACCESIBILIDAD: REDUCIR MOVIMIENTO
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
